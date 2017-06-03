@@ -1,8 +1,10 @@
+require 'order'
+
 class Takeaway
 
   def initialize(menu:, order: nil)
     @menu = menu
-    @order = order
+    @order = order || Order.new(menu)
   end
 
   def print_menu
@@ -10,11 +12,13 @@ class Takeaway
   end
 
   def place_order(dishes)
-    'Your order is for £21.50'
+    dishes.each do |dish, quantity|
+      order.add(dish, quantity)
+    end
   end
 
   private
 
-  attr_reader :menu
+  attr_reader :menu, :order
 
 end
