@@ -26,7 +26,7 @@ describe Order do
 
   it 'will not allow non-menu items to be added' do
     allow(menu).to receive(:has_dish?).with(:chips).and_return(false)
-    expect { order.add(:chips, 2) }.to raise_error "Chips are not on the menu"
+    expect { order.add(:chips, 2) }.to raise_error NoItemError, 'Chips are not on the menu'
   end
 
 end
