@@ -2,7 +2,9 @@ require 'order'
 
 describe Order do
 
-  subject(:order) { described_class.new }
+  subject(:order) { described_class.new(menu) }
+
+  let(:menu) { double(:menu) }
 
   let(:dishes) do
     {
