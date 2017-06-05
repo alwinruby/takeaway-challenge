@@ -6,7 +6,7 @@ describe Takeaway do
 
   let(:menu) { double(:menu, print: printed_menu) }
 
-  let(:order) { double(:order) }
+  let(:order) { double(:order, total: 21.50) }
 
   let(:printed_menu) { 'Kebab £5.50' }
 
@@ -20,5 +20,11 @@ describe Takeaway do
     expect(order).to receive(:add).twice
     takeaway.place_order(dishes)
   end
-  
+
+  it 'will know the order total' do
+    allow(order).to receive(:add)
+    total = takeaway.place_order(dishes)
+    expect(total).to eq(21.50)
+  end
+
 end
