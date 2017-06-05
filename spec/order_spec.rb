@@ -23,8 +23,7 @@ describe Order do
   end
 
   it 'selects a number of dishes off the menu' do
-    order.add(:shish, 2)
-    order.add(:donner, 3)
+    create_order
     expect(order.dishes).to eq(dishes)
   end
 
@@ -34,10 +33,14 @@ describe Order do
   end
 
   it 'calculates the order total' do
-    order.add(:shish, 2)
-    order.add(:donner, 3)
+    create_order
     total = 21.50
     expect(order.total).to eq(total)
+  end
+
+  def create_order
+    order.add(:shish, 2)
+    order.add(:donner, 3)
   end
 
 end
