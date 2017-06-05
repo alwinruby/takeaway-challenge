@@ -22,4 +22,12 @@ describe Menu do
     expect(menu.printed).to eq(printed_menu)
   end
 
+  it 'tells if a dish is on the menu' do
+    expect(menu.has_dish?(:shish)).to be true
+  end
+
+  it 'tells if a dish is not the menu' do
+    expect(menu.has_dish?(:chips)).to be false
+  end
+
 end
