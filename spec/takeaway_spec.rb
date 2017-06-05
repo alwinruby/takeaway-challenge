@@ -6,7 +6,7 @@ describe Takeaway do
 
   let(:menu) { double(:menu, print: printed_menu) }
 
-  let(:order) { double(:order, total: 21.50) }
+  let(:order) { instance_double('Order', total: 21.50) }
 
   let(:printed_menu) { 'Kebab £5.50' }
 

@@ -30,4 +30,8 @@ describe Menu do
     expect(menu.has_dish?(:chips)).to be false
   end
 
+  it 'calculates a price' do
+    expect(menu.price(:shish)).to eq(dishes[:shish])
+  end
+
 end
