@@ -28,7 +28,6 @@ describe Takeaway do
   end
 
   it 'will know the order total' do
-    # allow(order).to receive(:add)
     total = takeaway.place_order(dishes)
     expect(total).to eq(21.50)
   end

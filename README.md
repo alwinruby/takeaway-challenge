@@ -1,3 +1,42 @@
+# This is my version of the Takeaway Challenge
+
+It involve 4 user stories implemented of
+  1. Check Menu dishes
+  2. Choose Menu dish(es)
+  3. Total sum of dishes given
+  4. SMS Message sent confirming receipt of order and delivery time.
+
+To run tests, clone or download this repository.
+    In the terminal or command window
+    run the bundle command
+    run the command rspec
+
+The results of the test will be displayed
+
+Menu
+  has a list of foods and their prices
+  prints a list foods and prices
+  tells if a dish is on the menu
+  tells if a dish is not the menu
+  calculates a price
+
+Order
+  selects a number of dishes off the menu
+  will not allow non-menu items to be added
+  calculates the order total
+
+SMS
+  sms sent with eta
+
+Takeaway
+  shows menu with availible dishes and their corresponding prices
+  can place an order for available dishes
+  will know the order total
+  sends an SMS when order is placed
+
+The code has been done using TDD to drive the program to its current state.
+
+
 Takeaway Challenge
 ==================
 ```
@@ -11,7 +50,7 @@ Takeaway Challenge
       :' // ':   \ \ ''..'--:'-.. ':
       '. '' .'    \:.....:--'.-'' .'
        ':..:'                ':..:'
- 
+
  ```
 
 Instructions
@@ -69,7 +108,7 @@ In code review we'll be hoping to see:
 
 * All tests passing
 * High [Test coverage](https://github.com/makersacademy/course/blob/master/pills/test_coverage.md) (>95% is good)
-* The code is elegant: every class has a clear responsibility, methods are short etc. 
+* The code is elegant: every class has a clear responsibility, methods are short etc.
 
 Reviewers will potentially be using this [code review rubric](docs/review.md).  Referring to this rubric in advance will make the challenge somewhat easier.  You should be the judge of how much challenge you want this weekend.
 
